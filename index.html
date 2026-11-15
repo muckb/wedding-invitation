@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>김태형 ♥ 김지우 결혼합니다</title>
+<meta name="description" content="2027년 4월 17일 토요일 오전 11시, 루이비스 웨딩 중구">
+<!-- 카카오톡/문자 공유 미리보기 -->
+<meta property="og:title" content="김태형 ♥ 김지우 결혼합니다">
+<meta property="og:description" content="2027.04.17 (토) 오전 11시 · 루이비스 웨딩 중구">
+<meta property="og:image" content="https://muckb.github.io/wedding-invitation/images/cover.jpg">
+<meta property="og:url" content="https://muckb.github.io/wedding-invitation/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2b2b; --sub:#7a7a7a; --line:#e6e6e6; --navy:#2f4b80; --bg:#ffffff; --soft:#f6f7f9;
+    --ko:'Gowun Batang', serif; --en:'Cormorant Garamond', serif; --script:'Great Vibes', cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#eceef1}
+  body{font-family:var(--ko);color:var(--ink);background:var(--bg);max-width:480px;margin:0 auto;
+       line-height:1.8;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-x:hidden}
+  section{padding:72px 28px;text-align:center}
+  section + section{border-top:1px solid var(--line)}
+  .eyebrow{font-family:var(--en);letter-spacing:.3em;font-size:13px;color:var(--navy);text-transform:uppercase}
+  h2{font-family:var(--en);font-weight:500;font-size:28px;letter-spacing:.06em;margin:6px 0 32px}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.on{opacity:1;transform:none}
+
+  /* HERO */
+  .hero{position:relative;height:100svh;min-height:600px;max-height:860px;padding:0;color:#fff;overflow:hidden}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .hero .title{position:absolute;left:0;right:0;top:7%;padding:0 24px;text-align:left}
+  .hero .our,.hero .day{font-family:var(--en);font-style:italic;font-size:clamp(30px,10vw,40px);line-height:1}
+  .hero .wed{font-family:var(--script);font-size:clamp(64px,21vw,92px);line-height:1;margin:-4px 0 -6px 6%;white-space:nowrap}
+  .hero .day{text-align:right}
+  .hero .bottom{position:absolute;left:0;right:0;bottom:44px;text-align:center}
+  .hero .date{font-family:var(--en);font-size:30px;letter-spacing:.14em}
+  .hero .names{font-family:var(--en);font-size:13px;letter-spacing:.3em;margin-top:6px}
+  .hero .scroll{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-size:11px;opacity:.8;animation:bob 2s infinite}
+  @keyframes bob{50%{transform:translate(-50%,6px)}}
+
+  /* INVITATION */
+  .msg{font-size:15.5px;line-height:2.1}
+  .parents{margin-top:40px;font-size:15px;line-height:2.2}
+  .parents .rel{color:var(--sub);font-size:13px;margin:0 6px 0 2px}
+  .parents b{font-size:17px}
+
+  /* CALENDAR */
+  .when{font-size:16px;margin-bottom:28px}
+  .cal{max-width:320px;margin:0 auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}
+  .cal .month{font-family:var(--en);font-style:italic;font-size:22px;margin-bottom:10px}
+  .cal table{width:100%;border-collapse:collapse;font-family:var(--en);font-size:16px}
+  .cal th{font-weight:400;font-size:13px;color:var(--sub);padding:6px 0;font-style:italic}
+  .cal td{height:40px;text-align:center}
+  .cal td.sun,.cal th.sun{color:#c0504d}
+  .cal td.on span{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center}
+  .dday{margin-top:28px;font-size:15px}
+  .dday .n{color:var(--navy);font-weight:700}
+  .count{display:flex;justify-content:center;gap:12px;margin-top:16px;font-family:var(--en)}
+  .count div{min-width:58px;padding:10px 4px;background:var(--soft);border-radius:10px}
+  .count b{display:block;font-size:24px;font-weight:500;line-height:1.2}
+  .count small{font-size:11px;letter-spacing:.15em;color:var(--sub)}
+
+  /* GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+  .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;cursor:pointer;display:block}
+  .gallery img:first-child{grid-column:span 3;aspect-ratio:3/4}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:50}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:100%;max-height:100%}
+
+  /* LOCATION */
+  .venue b{font-size:18px}
+  .venue p{color:var(--sub);font-size:14px}
+  .map{margin:24px -8px 12px}
+  .map img{width:100%;display:block}
+  .btns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:32px}
+  .btn{display:block;width:100%;padding:11px 0;border:1px solid var(--line);border-radius:8px;font-size:13px;color:var(--ink);text-decoration:none;background:#fff;font-family:var(--ko);cursor:pointer}
+  .btn:active{background:var(--soft)}
+  .ways{text-align:left}
+  .ways dt{font-weight:700;font-size:15px;margin-top:20px}
+  .ways dd{font-size:14px;color:#444;line-height:1.75}
+  .ways .tag{display:inline-block;min-width:34px;font-size:12px;color:var(--sub)}
+
+  /* JEJU */
+  .jeju{background:var(--soft)}
+  .jeju p{font-size:15px}
+  .jeju b{color:var(--navy)}
+
+  /* ACCOUNT */
+  .acc{max-width:380px;margin:0 auto;text-align:left}
+  .acc details{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff}
+  .acc summary{list-style:none;padding:15px 18px;font-size:15px;cursor:pointer;display:flex;justify-content:space-between}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary::after{content:'+';color:var(--sub)}
+  .acc details[open] summary::after{content:'−'}
+  .acc .row{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--line);font-size:13.5px}
+  .acc .row small{display:block;color:var(--sub)}
+  .acc .copy{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;font-family:var(--ko)}
+
+  footer{padding:48px 24px 64px;text-align:center;font-family:var(--en);color:var(--sub);font-size:13px;letter-spacing:.2em}
+  footer .btn{max-width:200px;margin:0 auto 28px;letter-spacing:0}
+  .toast{position:fixed;left:50%;bottom:36px;transform:translateX(-50%);background:rgba(30,30,30,.9);color:#fff;font-size:13px;padding:10px 18px;border-radius:20px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:60}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- 1. 표지 -->
+<section class="hero">
+  <img src="images/cover.jpg" alt="김태형, 김지우 웨딩 사진">
+  <div class="title">
+    <div class="our">Our</div>
+    <div class="wed">Wedding</div>
+    <div class="day">Day</div>
+  </div>
+  <div class="bottom">
+    <div class="date">2027. 04. 17</div>
+    <div class="names">TAEHYUNG &amp; JIWOO</div>
+  </div>
+  <div class="scroll">▼</div>
+</section>
+
+<!-- 2. 초대글 -->
+<section class="reveal">
+  <div class="eyebrow">Invitation</div>
+  <h2>소중한 분들을 초대합니다</h2>
+  <p class="msg">
+    같은 공과대학 캠퍼스에서<br>
+    4학년과 1학년으로 처음 만난 두 사람이<br>
+    함께한 시간을 차곡차곡 쌓아<br>
+    이제 평생의 동반자가 되려 합니다.<br><br>
+    귀한 걸음 하시어<br>
+    저희의 새로운 시작을 축복해 주세요.
+  </p>
+  <div class="parents">
+    김승회 · 김선희<span class="rel">의 아들</span><b>김태형</b><br>
+    김경현 · 현미애<span class="rel">의 딸</span><b>김지우</b>
+  </div>
+</section>
+
+<!-- 3. 일시 -->
+<section class="reveal">
+  <div class="eyebrow">Wedding Day</div>
+  <h2>2027. 04. 17</h2>
+  <p class="when">2027년 4월 17일 토요일 오전 11시<br>루이비스 웨딩 중구 18층 다산홀</p>
+  <div class="cal">
+    <div class="month">April</div>
+    <table id="cal"></table>
+  </div>
+  <p class="dday" id="ddayText"></p>
+  <div class="count" id="count"></div>
+</section>
+
+<!-- 4. 갤러리 (images 폴더에 사진을 추가하고 아래 img 태그를 늘리면 됩니다) -->
+<section class="reveal">
+  <div class="eyebrow">Gallery</div>
+  <h2>우리의 순간</h2>
+  <div class="gallery" id="gallery">
+    <img src="images/cover.jpg" alt="웨딩 사진 1">
+    <!-- <img src="images/photo2.jpg" alt="웨딩 사진 2"> -->
+  </div>
+</section>
+
+<!-- 5. 오시는 길 -->
+<section class="reveal">
+  <div class="eyebrow">Location</div>
+  <h2>오시는 길</h2>
+  <div class="venue">
+    <b>루이비스 웨딩 중구 · 18층 다산홀</b>
+    <p>서울 중구 청파로 463 한국경제신문사 18층<br>Tel. <a href="tel:023126800" style="color:inherit">02-312-6800</a></p>
+  </div>
+  <div class="map"><img src="images/map.png" alt="루이비스 웨딩 중구 약도"></div>
+  <div class="btns">
+    <a class="btn" href="https://map.naver.com/p/search/%EB%A3%A8%EC%9D%B4%EB%B9%84%EC%8A%A4%20%EC%9B%A8%EB%94%A9%20%EC%A4%91%EA%B5%AC" target="_blank" rel="noopener">네이버 지도</a>
+    <a class="btn" href="https://map.kakao.com/link/search/%EB%A3%A8%EC%9D%B4%EB%B9%84%EC%8A%A4%20%EC%9B%A8%EB%94%A9%20%EC%A4%91%EA%B5%AC" target="_blank" rel="noopener">카카오맵</a>
+    <button class="btn" type="button" data-copy="서울 중구 청파로 463 한국경제신문사">주소 복사</button>
+  </div>
+  <dl class="ways">
+    <dt>지하철</dt>
+    <dd>2·5호선 충정로역 4번 출구 도보 3분</dd>
+    <dt>셔틀버스</dt>
+    <dd>서울역 서부역 롯데마트 앞 탑승 (10분 배차 운행)</dd>
+    <dt>버스</dt>
+    <dd>한국경제신문사, 충정로역 하차<br>
+      <span class="tag">간선</span>172 271 273 307 472 600 602 603 700 742<br>
+      <span class="tag">지선</span>1002 7011 7013 7017<br>
+      <span class="tag">광역</span>1000 1004 1100 1101 1200 1300 1301 1302 1400 1500 1601 8600 G6005 M6117</dd>
+    <dt>자가용</dt>
+    <dd>서울시 중구 청파로 463 또는 ‘한국경제신문사’ 검색<br>본 건물 지하 주차장 이용</dd>
+  </dl>
+</section>
+
+<!-- 6. 제주 피로연 -->
+<section class="jeju reveal">
+  <div class="eyebrow">Jeju Reception</div>
+  <h2>제주 피로연</h2>
+  <p><b>2027년 3월 27일(토) 오전 11시</b><br>노팅힐 제주에서 먼저 인사드립니다.</p>
+  <div class="btns" style="margin:24px 0 0;grid-template-columns:1fr 1fr">
+    <a class="btn" href="https://map.naver.com/p/search/%EB%85%B8%ED%8C%85%ED%9E%90%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener">네이버 지도</a>
+    <a class="btn" href="https://map.kakao.com/link/search/%EB%85%B8%ED%8C%85%ED%9E%90%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener">카카오맵</a>
+  </div>
+</section>
+
+<!-- 7. 마음 전하실 곳 (계좌번호를 실제 정보로 바꿔 주세요) -->
+<section class="reveal">
+  <div class="eyebrow">With Heart</div>
+  <h2>마음 전하실 곳</h2>
+  <div class="acc">
+    <details>
+      <summary>신랑측 계좌번호</summary>
+      <div class="row"><div>○○은행 000-0000-0000<small>신랑 김태형</small></div><button class="copy" data-copy="○○은행 000-0000-0000">복사</button></div>
+      <div class="row"><div>○○은행 000-0000-0000<small>아버지 김승회</small></div><button class="copy" data-copy="○○은행 000-0000-0000">복사</button></div>
+      <div class="row"><div>○○은행 000-0000-0000<small>어머니 김선희</small></div><button class="copy" data-copy="○○은행 000-0000-0000">복사</button></div>
+    </details>
+    <details>
+      <summary>신부측 계좌번호</summary>
+      <div class="row"><div>○○은행 000-0000-0000<small>신부 김지우</small></div><button class="copy" data-copy="○○은행 000-0000-0000">복사</button></div>
+      <div class="row"><div>○○은행 000-0000-0000<small>아버지 김경현</small></div><button class="copy" data-copy="○○은행 000-0000-0000">복사</button></div>
+      <div class="row"><div>○○은행 000-0000-0000<small>어머니 현미애</small></div><button class="copy" data-copy="○○은행 000-0000-0000">복사</button></div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <button class="btn" type="button" id="shareLink">청첩장 링크 복사</button>
+  TAEHYUNG &amp; JIWOO<br>2027. 04. 17
+</footer>
+
+<div class="lightbox" id="lightbox"><img alt=""></div>
+<div class="toast" id="toast"></div>
+
+<script>
+  // 결혼식 일시
+  const WEDDING = new Date('2027-04-17T11:00:00+09:00');
+
+  // 달력 (2027년 4월)
+  (function(){
+    const y = 2027, m = 3, day = 17;
+    const first = new Date(y, m, 1).getDay(), last = new Date(y, m + 1, 0).getDate();
+    const names = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    let html = '<tr>' + names.map((n,i)=>`<th class="${i===0?'sun':''}">${n}</th>`).join('') + '</tr><tr>';
+    for (let i = 0; i < first; i++) html += '<td></td>';
+    for (let d = 1; d <= last; d++){
+      const col = (first + d - 1) % 7;
+      const cls = [col===0?'sun':'', d===day?'on':''].join(' ').trim();
+      html += `<td class="${cls}"><span>${d}</span></td>`;
+      if (col === 6 && d !== last) html += '</tr><tr>';
+    }
+    html += '</tr>';
+    document.getElementById('cal').innerHTML = html;
+  })();
+
+  // D-day 카운트다운
+  function tick(){
+    const diff = WEDDING - new Date();
+    const t = document.getElementById('ddayText'), c = document.getElementById('count');
+    if (diff <= 0){ t.innerHTML = '태형 <span style="color:#c0504d">♥</span> 지우의 결혼식에 와 주셔서 감사합니다'; c.innerHTML=''; return; }
+    const d = Math.floor(diff/864e5), h = Math.floor(diff/36e5)%24, mi = Math.floor(diff/6e4)%60, s = Math.floor(diff/1e3)%60;
+    t.innerHTML = `태형 <span style="color:#c0504d">♥</span> 지우의 결혼식이 <span class="n">${d}일</span> 남았습니다`;
+    c.innerHTML = [[d,'DAYS'],[h,'HOUR'],[mi,'MIN'],[s,'SEC']].map(([v,l])=>`<div><b>${v}</b><small>${l}</small></div>`).join('');
+  }
+  tick(); setInterval(tick, 1000);
+
+  // 스크롤 등장 효과
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // 갤러리 크게 보기
+  const lb = document.getElementById('lightbox');
+  document.querySelectorAll('#gallery img').forEach(img => img.addEventListener('click', () => { lb.querySelector('img').src = img.src; lb.classList.add('open'); }));
+  lb.addEventListener('click', () => lb.classList.remove('open'));
+
+  // 복사
+  const toast = msg => { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 1600); };
+  async function copy(text){
+    try { await navigator.clipboard.writeText(text); }
+    catch(e){ const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+    toast('복사되었습니다');
+  }
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => copy(b.dataset.copy)));
+  document.getElementById('shareLink').addEventListener('click', () => copy(location.href));
+</script>
+</body>
+</html>
